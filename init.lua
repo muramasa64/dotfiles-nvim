@@ -782,7 +782,7 @@ end)
 now(function()
   add({ source = 'https://github.com/akinsho/toggleterm.nvim' })
   require('toggleterm').setup({
-    size = 20,
+    size = 50,
     open_mapping = [[<c-t>]],
     hide_numbers = true,
     shade_filetypes = {},
