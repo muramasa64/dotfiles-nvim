@@ -354,7 +354,8 @@ now(function()
   })
 end)
 
--- 'mini.cube'
+-- 'mini.clue'
+-- キーのプレフィックスを入力した後、次のキーを表示する
 later(function()
   local function mode_nx(keys)
     return { mode = 'n', keys = keys }, { mode = 'x', keys = keys }
@@ -809,3 +810,5 @@ now(function()
     end
   })
 end)
+
+require('plugins.aerial')
