@@ -110,6 +110,7 @@ require('plugins.mini')
 require('plugins.treesitter')
 require('plugins.toggleterm')
 require('plugins.aerial')
+require('plugins.nvim-surround')
 
 -- Vim内蔵のプラグインの読み読みを無効化するハック
 -- この部分は、常にinit.luaの最後にある必要がある
