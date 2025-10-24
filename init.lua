@@ -102,6 +102,7 @@ require('mini.deps').setup({ path = { package = path_package } })
 -- later: 渡されたコールバック関数を遅延実行する
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
+-- add('neovim/nvim-lspconfig')
 require('lsp')
 
 require('plugins.colorscheme')
