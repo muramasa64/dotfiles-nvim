@@ -3,6 +3,7 @@ vim.opt.number = true     -- 行番号を表示する
 vim.opt.cursorline = true -- カーソル行をハイライトする
 vim.opt.scrolloff = 3     -- カーソルの上または下に、最低限表示される行数
 vim.opt.wrap = true -- 長い行を折り返す
+vim.opt.linebreak = false -- そのまま折り返す
 
 -- インデントの設定
 vim.opt.expandtab = true  -- タブを\tではなくスペースで表す
