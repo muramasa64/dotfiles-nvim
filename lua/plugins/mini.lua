@@ -1,7 +1,7 @@
 -- add: mini.nvim以外のプラグインの読み込み
 -- now: 渡されたコールバック関数をすぐに実行する
 -- later: 渡されたコールバック関数を遅延実行する
-local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
+local now, later = MiniDeps.now, MiniDeps.later
 
 -- 'mini.icons'
 -- Nerd Fontにあるアイコンを使えるようにする
