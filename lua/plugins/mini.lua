@@ -306,18 +306,18 @@ now(function()
 
   -- キーコードの定義
   local keys = {
-    cn = vim.keycode('<c-n>'),
-    cp = vim.keycode('<c-p>'),
-    ct = vim.keycode('<c-t>'),
-    cd = vim.keycode('<c-d>'),
-    cr = vim.keycode('<cr>'),
-    cy = vim.keycode('<c-y>'),
+    cn = vim.keycode('<c-n>'),   -- 補完メニューで次を表示
+    cp = vim.keycode('<c-p>'),   -- 補完メニューで前を表示
+    ct = vim.keycode('<Tab>'),   -- タブを挿入
+    cd = vim.keycode('<c-t>'),   -- インデントを追加
+    cr = vim.keycode('<cr>'),    -- Enterキー
+    cy = vim.keycode('<c-y>'),   -- 補完を確定
   }
 
   -- オートコンプリートの選択を<tab>/<s-tab>で行う
   vim.keymap.set('i', '<tab>', function()
     -- ポップアップが表示されている時は、次の選択肢
-    -- ポップアップが表示されていない時は、インデントを追加
+    -- ポップアップが表示されていない時は、タブを挿入
     return vim.fn.pumvisible() == 1 and keys.cn or keys.ct
   end, { expr = true, desc = 'Select next item if popup is visible' })
 
