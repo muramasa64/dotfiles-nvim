@@ -197,9 +197,9 @@ end)
 
 -- 'mini.pairs'
 -- カッコやクオートがペアで入力される
-later(function()
-  require('mini.pairs').setup()
-end)
+-- later(function()
+  -- require('mini.pairs').setup()
+-- end)
 
 -- 'mini.surround'
 -- 既存の文字列にカッコを追加したり削除したりできる
