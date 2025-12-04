@@ -1,4 +1,17 @@
 -- keymaps
+-- 0を使って、インデントの行頭と、行の頭とトグルで移動する
+vim.keymap.set('n', '0', function()
+  local line = vim.fn.getline('.')
+  local col = vim.fn.col('.')
+  local before_cursor = string.sub(line, 1, col - 1)
+
+  if string.match(before_cursor, '^%s+$') then
+    return '0'
+  else
+    return '^'
+  end
+end, { expr = true, desc = 'Move cursor line head and indent head (toggle)'})
+
 -- pを使ってペーストした時に、カーソルをペースト末尾に移動させる
 vim.keymap.set('n', 'p', 'p`]', { desc = 'Paste and move to the end' })
 vim.keymap.set('n', 'P', 'P`]', { desc = 'Paste and move to the end' })
