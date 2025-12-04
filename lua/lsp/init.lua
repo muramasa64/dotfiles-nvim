@@ -29,6 +29,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
       end, { buffer = args.buf, desc = 'format buffer' })
     end
+
+    -- if client:supports_method('textDocument/formatting') then
+    --   -- バッファを保存した際にフォーマットを実行する
+    --   vim.api.nvim_create_autocmd('BufWritePre', {
+    --     buffer = args.buf,
+    --     callback = function()
+    --       vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
+    --     end
+    --   })
+    -- end
   end,
 })
 
