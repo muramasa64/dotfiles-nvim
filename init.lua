@@ -118,15 +118,15 @@ require('plugins.nvim-ghost')
 
 -- Vim内蔵のプラグインの読み読みを無効化するハック
 -- この部分は、常にinit.luaの最後にある必要がある
-now(function()
-  local default_rtp = vim.opt.runtimepath:get()
-  vim.opt.runtimepath:remove(vim.env.VIMRUNTIME)
-  create_autocmd("SourcePre", {
-    pattern = "*/plugin/*",
-    once = true,
-    callback = function()
-      vim.opt.runtimepath = default_rtp
-    end
-  })
-end)
-
+-- now(function()
+--   local default_rtp = vim.opt.runtimepath:get()
+--   vim.opt.runtimepath:remove(vim.env.VIMRUNTIME)
+--   create_autocmd("SourcePre", {
+--     pattern = "*/plugin/*",
+--     once = true,
+--     callback = function()
+--       vim.opt.runtimepath = default_rtp
+--     end
+--   })
+-- end)
+--
