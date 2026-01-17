@@ -1,6 +1,6 @@
 return {
   cmd = { 'nixd' },
-  filetype = { 'nix' },
+  filetypes = { 'nix' },
   root_markers = { 'flake.nix', '.git' },
   settings = {
     nixd = {
