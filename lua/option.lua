@@ -17,3 +17,6 @@ vim.opt.whichwrap = 'b,s,h,l,<,>,[,],~' -- 行頭または行末で、次のキ�
 
 -- クリップボードの設定
 vim.opt.clipboard:append('unnamedplus,unnamed') -- クリップボードをOSと共有する
+
+-- shell
+vim.opt.shell = 'fish'
