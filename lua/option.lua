@@ -16,7 +16,7 @@ vim.opt.tabstop = 4       -- 水平タブ文字（Ascii code 9）を使う時に
 vim.opt.whichwrap = 'b,s,h,l,<,>,[,],~' -- 行頭または行末で、次のキーを使った時に、カーソルが次の行に移動させる
 
 -- クリップボードの設定
-vim.opt.clipboard:append('unnamedplus,unnamed') -- クリップボードをOSと共有する
+-- vim.opt.clipboard:append('unnamedplus,unnamed') -- クリップボードをOSと共有する
 
 -- shell
 vim.opt.shell = 'fish'
