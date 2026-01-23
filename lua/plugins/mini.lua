@@ -302,7 +302,7 @@ now(function()
   -- 補間機能の改善
   vim.opt.complete = { '.', 'w', 'k', 'b', 'u' }
   vim.opt.completeopt:append('fuzzy')
-  vim.opt.directory:append('/usr/share/dict/words') -- macOSの場合、ここに単語リストがある
+  vim.opt.dictionary:append('/usr/share/dict/words') -- macOSの場合、ここに単語リストがある
 
   -- キーコードの定義
   local keys = {
