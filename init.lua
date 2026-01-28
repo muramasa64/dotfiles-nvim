@@ -117,10 +117,10 @@ require('plugins.obsidian')
 require('plugins.nvim-ghost')
 -- require('plugins.rainbow_csv')
 --
-vim.lsp.config.treesitter_ls = {
-  cmd = { "/Volumes/repos/repos/treesitter-ls/target/release/treesitter-ls" },
-}
-vim.lsp.enable("treesitter_ls")
+-- vim.lsp.config.treesitter_ls = {
+--   cmd = { "/Volumes/repos/repos/treesitter-ls/target/release/treesitter-ls" },
+-- }
+-- vim.lsp.enable("treesitter_ls")
 
 vim.api.nvim_create_autocmd("FileType", {
   callback = function()
