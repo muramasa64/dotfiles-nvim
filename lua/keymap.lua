@@ -12,6 +12,8 @@ vim.keymap.set('n', '0', function()
   end
 end, { expr = true, desc = 'Move cursor line head and indent head (toggle)'})
 
+-- yYで、行全体を改行を含まずにYankする
+vim.keymap.set('n', 'yY', '^y$', { desc = 'Yank line without newline' })
 -- pを使ってペーストした時に、カーソルをペースト末尾に移動させる
 vim.keymap.set('n', 'p', 'p`]', { desc = 'Paste and move to the end' })
 vim.keymap.set('n', 'P', 'P`]', { desc = 'Paste and move to the end' })

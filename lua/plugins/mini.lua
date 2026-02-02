@@ -240,6 +240,9 @@ later(function()
       -- `g` key
       mode_nx('g'),
 
+      -- `y` key
+      mode_nx('y'),
+
       -- Marks
       mode_nx("'"),
       mode_nx('`'),
