@@ -528,9 +528,9 @@ end)
 -- 'mini.align'
 -- 一定のルールで文字列を並べ直す
 -- ga で整列オペレーターを起動する
-later(function()
-  require('mini.align').setup()
-end)
+-- later(function()
+--   require('mini.align').setup()
+-- end)
 
 -- 'mini.map'
 -- ミニマップを表示する
