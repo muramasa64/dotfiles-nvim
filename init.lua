@@ -119,6 +119,7 @@ require('plugins.nvim-ghost')
 require('plugins.render-markdown')
 require('plugins.nvim-treesitter-textobjects')
 require('plugins.nvim-aibo')
+require('plugins.nvim-treesitter')
 
 -- vim.lsp.config.treesitter_ls = {
 --   cmd = { "/Volumes/repos/repos/treesitter-ls/target/release/treesitter-ls" },
