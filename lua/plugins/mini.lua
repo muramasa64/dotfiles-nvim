@@ -534,22 +534,22 @@ end)
 
 -- 'mini.map'
 -- ミニマップを表示する
-later(function()
-  local map = require('mini.map')
-  map.setup({
-    integrations = {
-      map.gen_integration.builtin_search(),
-      map.gen_integration.diff(),
-      map.gen_integration.diagnostic(),
-    },
-    symbols = {
-      scroll_line = '▶',
-    }
-  })
-  -- mmt でミニマップの表示をトグルする
-  vim.keymap.set('n', 'mmt', MiniMap.toggle, { desc = 'MiniMap.toggle' })
-  -- mmf で、ミニマップにフォーカスする
-  vim.keymap.set('n', 'mmf', MiniMap.toggle_focus, { desc = 'MiniMap.toggle_focus' })
-  -- mms で、ミニマップを左右移動させる
-  vim.keymap.set('n', 'mms', MiniMap.toggle_side, { desc = 'MiniMap.toggle_side' })
-end)
+-- later(function()
+--   local map = require('mini.map')
+--   map.setup({
+--     integrations = {
+--       map.gen_integration.builtin_search(),
+--       map.gen_integration.diff(),
+--       map.gen_integration.diagnostic(),
+--     },
+--     symbols = {
+--       scroll_line = '▶',
+--     }
+--   })
+--   -- mmt でミニマップの表示をトグルする
+--   vim.keymap.set('n', 'mmt', MiniMap.toggle, { desc = 'MiniMap.toggle' })
+--   -- mmf で、ミニマップにフォーカスする
+--   vim.keymap.set('n', 'mmf', MiniMap.toggle_focus, { desc = 'MiniMap.toggle_focus' })
+--   -- mms で、ミニマップを左右移動させる
+--   vim.keymap.set('n', 'mms', MiniMap.toggle_side, { desc = 'MiniMap.toggle_side' })
+-- end)

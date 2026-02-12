@@ -116,7 +116,8 @@ require('plugins.vim-ambiwidth')
 require('plugins.obsidian')
 require('plugins.nvim-ghost')
 -- require('plugins.rainbow_csv')
---
+require('plugins.render-markdown')
+
 -- vim.lsp.config.treesitter_ls = {
 --   cmd = { "/Volumes/repos/repos/treesitter-ls/target/release/treesitter-ls" },
 -- }
