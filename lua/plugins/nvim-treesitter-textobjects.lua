@@ -14,6 +14,7 @@ vim.g.no_plugin_maps = true
 MiniDeps.later(function()
   require('nvim-treesitter-textobjects').setup({
     select = {
+      enable = true,
       -- Automatically jump forward to textobj, similar to targets.vim
       lookahead = true,
 
@@ -41,24 +42,40 @@ MiniDeps.later(function()
       -- and should return true of false
       include_surrounding_whitespace = false,
     },
+    move = {
+      enable = true,
+      set_jumps = true,
+    }
   })
 end)
 
 -- keymaps
 -- You can use the capture groups defined in `textobjects.scm`
 vim.keymap.set({ "x", "o" }, "am", function()
-  require "nvim-treesitter-textobjects.select".select_textobject("@function.outer", "textobjects")
-end)
+  require("nvim-treesitter-textobjects.select").select_textobject("@function.outer", "textobjects")
+end, { desc = 'select function outer' })
+
 vim.keymap.set({ "x", "o" }, "im", function()
-  require "nvim-treesitter-textobjects.select".select_textobject("@function.inner", "textobjects")
-end)
+  require("nvim-treesitter-textobjects.select").select_textobject("@function.inner", "textobjects")
+end, { desc = 'select function inner' })
+
 vim.keymap.set({ "x", "o" }, "ac", function()
-  require "nvim-treesitter-textobjects.select".select_textobject("@class.outer", "textobjects")
-end)
+  require("nvim-treesitter-textobjects.select").select_textobject("@class.outer", "textobjects")
+end, { desc = 'select class outer' })
+
 vim.keymap.set({ "x", "o" }, "ic", function()
-  require "nvim-treesitter-textobjects.select".select_textobject("@class.inner", "textobjects")
-end)
+  require("nvim-treesitter-textobjects.select").select_textobject("@class.inner", "textobjects")
+end, { desc = 'select class inner' })
+
 -- You can also use captures from other query groups like `locals.scm`
 vim.keymap.set({ "x", "o" }, "as", function()
-  require "nvim-treesitter-textobjects.select".select_textobject("@local.scope", "locals")
-end)
+  require("nvim-treesitter-textobjects.select").select_textobject("@local.scope", "locals")
+end, { desc = 'select local scope' })
+
+vim.keymap.set({ 'n', 'x', 'o' }, ']M', function()
+  require('nvim-treesitter-textobjects.move').goto_next_start("@function.outer", "textobjects")
+end, { desc = 'move to next function' })
+
+vim.keymap.set({ 'n', 'x', 'o' }, '[M', function()
+  require('nvim-treesitter-textobjects.move').goto_previous_end("@function.outer", "textobjects")
+end, { desc = 'move to previous function' })
