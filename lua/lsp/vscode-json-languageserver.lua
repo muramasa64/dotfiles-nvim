@@ -5,6 +5,9 @@ return {
     json = {
       validate = {
         enable = true
+      },
+      format = {
+        enable = true
       }
     }
   }
