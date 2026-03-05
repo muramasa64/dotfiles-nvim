@@ -126,17 +126,6 @@ require('plugins.nvim-treesitter-textobjects')
 require('plugins.nvim-aibo')
 require('plugins.nvim-treesitter')
 
--- vim.lsp.config.treesitter_ls = {
---   cmd = { "/Volumes/repos/repos/treesitter-ls/target/release/treesitter-ls" },
--- }
--- vim.lsp.enable("treesitter_ls")
-
-vim.api.nvim_create_autocmd("FileType", {
-  callback = function()
-    vim.treesitter.stop()
-  end,
-})
-
 -- Vim内蔵のプラグインの読み読みを無効化するハック
 -- この部分は、常にinit.luaの最後にある必要がある
 -- now(function()

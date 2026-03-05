@@ -9,6 +9,10 @@ end)
 vim.api.nvim_create_autocmd("FileType", {
   group = vim.api.nvim_create_augroup("vim-treesitter-start", {}),
   callback = function(ctx)
-    pcall(vim.treesitter.start)
+    -- vim.notify("FileType fired: " .. ctx.match)
+    -- パーサーが存在するか事前チェック
+    if pcall(vim.treesitter.language.inspect, ctx.match) then
+      vim.treesitter.start(ctx.buf)
+    end
   end,
 })
