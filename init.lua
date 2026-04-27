@@ -124,6 +124,10 @@ require('plugins.nvim-treesitter-textobjects')
 require('plugins.nvim-aibo')
 require('plugins.nvim-treesitter')
 
+if vim.fn.executable('nvr') == 1 then
+  vim.env.EDITOR = 'nvr -cc split -c  "set bufhidden=delete" --remote-wait'
+end
+
 -- Vim内蔵のプラグインの読み読みを無効化するハック
 -- この部分は、常にinit.luaの最後にある必要がある
 -- now(function()
